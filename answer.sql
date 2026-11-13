@@ -22,13 +22,12 @@ SELECT
 FROM customers
 GROUP BY customerName, country;
 
--- QUESTION 3: TOTAL PRICE OF PRODUCTS ORDERED
+-- QUESTION 3: TOTAL PRICE OF EACH PRODUCT
 SELECT
     productCode,
-    quantityOrdered,
     SUM(quantityOrdered * priceEach) AS total_price
 FROM orderdetails
-GROUP BY productCode, quantityOrdered;
+GROUP BY productCode;
 
 -- QUESTION 4: HIGHEST PAYMENT FOR EACH CHECK NUMBER
 SELECT
